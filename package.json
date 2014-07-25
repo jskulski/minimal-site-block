@@ -5,5 +5,15 @@
   "description": "a basic add-on",
   "author": "",
   "license": "MPL 2.0",
-  "version": "0.1"
+  "version": "0.1",
+  "preferences": [
+  {
+  	"name": "blockedSites",
+  	"title": "Blocked Sites",
+  	"description": "Comma-separated sites to block.",
+  	"hidden": false,
+  	"value": "*.mozilla.org,*.firefox.com",
+  	"type": "string"
+  }
+  ]
 }
