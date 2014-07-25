@@ -1,11 +1,12 @@
 {
   "name": "minimal-site-block",
-  "title": "minimal-site-block",
-  "id": "jid1-uA9MrbUjT8t0HQ",
-  "description": "a basic add-on",
-  "author": "",
+  "title": "Minimal Site Block",
+  "id": "minimal-site-block@clemens-bartz.de",
+  "description": "Block sites easily with a minimal interface.",
+  "author": "Clemens Bartz",
   "license": "MPL 2.0",
   "version": "0.1",
+  "permissions": {"private-browsing": false},
   "preferences": [
   {
   	"name": "blockedSites",
