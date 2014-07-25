@@ -12,7 +12,7 @@
   	"title": "Blocked Sites",
   	"description": "Comma-separated sites to block. Please note that only one wildcard (*) is allowed per site.",
   	"hidden": false,
-  	"value": "*.mozilla.org,*.firefox.com",
+  	"value": "",
   	"type": "string"
   }
   ]
