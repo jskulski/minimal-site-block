@@ -1,2 +1,2 @@
 window.stop();
-location.href = "about:blank?error_code=minimal-site-block&u="+location.href;
+location.href = "data:text/html,<html><body><title>You have blocked this site!</title></body><body><h1>You have blocked this site!</h1><p>"+location.href+"</p>";
