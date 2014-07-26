@@ -12,7 +12,7 @@
   {
   	"name": "blockedSites",
   	"title": "Blocked Sites",
-  	"description": "Comma-separated sites to block. Please note that only one wildcard (*) is allowed per site.",
+  	"description": "Comma-separated sites to block. Please note that only one wildcard (*) is allowed per site. Example: *.mozilla.org,*.firefox.com",
   	"hidden": false,
   	"value": "",
   	"type": "string"
