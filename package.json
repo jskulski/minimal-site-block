@@ -6,6 +6,7 @@
   "author": "Clemens Bartz",
   "license": "MPL 2.0",
   "version": "0.1",
+  "icon": "icons/icon-48.png",
   "permissions": {"private-browsing": false},
   "preferences": [
   {
