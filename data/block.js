@@ -1,2 +1,2 @@
 window.stop();
-location.href = "data:text/html,<!Doctype html><html><head><meta charset='utf-8'/><title>You have blocked this site!</title></head><body><h1>You have blocked this site!</h1><p><a href=\""+location.href+"\">"+location.href+"</a></p></body></html>";
+location.replace("data:text/html,<!Doctype html><html><head><meta charset='utf-8'/><title>You have blocked this site!</title></head><body><h1>You have blocked this site!</h1><p><a href=\""+location.href+"\">"+location.href+"</a></p></body></html>");
