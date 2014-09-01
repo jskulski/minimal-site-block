@@ -4,9 +4,9 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -37,7 +37,7 @@
 <h2>
 <a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h2>
 
-<p>This addon provides you with a basic interface to block websites. Since it uses High-Level-Apis from the Firefox Add-on SDK, this add-on is able to run on a desktop as well as a mobile Firefox.</p>
+<p>This Add-on provides you with a basic interface to block websites. Since it uses High-Level-APIs from the Firefox Add-on SDK, this Add-on is able to run on a desktop as well as a mobile Firefox.</p>
 
 <h2>
 <a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h2>
@@ -45,6 +45,39 @@
 <p>You can download this add-on from the <a href="https://addons.mozilla.org/firefox/addon/minimal-site-block/">Firefox Add-On page</a>.</p>
 
 <p>Or you can download the source code and compile the add-on for yourself.</p>
+
+<h2>
+<a name="develop" class="anchor" href="#develop"><span class="octicon octicon-link"></span></a>Develop</h2>
+
+<p>This Add-on is only developed using High-Level-APIs. Please refrain from using other or third-party APIs. Before using a new API, please check if it is available on <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Mobile_development">desktop as well as mobile</a>.
+Having downloaded the SDK, you can activate it like this:</p>
+
+<pre><code>source bin/activate
+</code></pre>
+
+<p>If you want to try this Add-on, try the following commands:</p>
+
+<h3>
+<a name="desktop" class="anchor" href="#desktop"><span class="octicon octicon-link"></span></a>Desktop</h3>
+
+<p>You will need a local <a href="https://www.mozilla.org/firefox">Firefox</a> installation.</p>
+
+<pre><code>cfx run
+</code></pre>
+
+<h3>
+<a name="mobile" class="anchor" href="#mobile"><span class="octicon octicon-link"></span></a>Mobile</h3>
+
+<p>Please make sure adb in your $PATH, otherwise you will have to specify the path. Please use <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta">Firefox Beta</a>.</p>
+
+<pre><code>cfx run -a fennec-on-device -b adb --mobile-app firefox_beta --force-mobile
+</code></pre>
+
+<h3>
+<a name="building" class="anchor" href="#building"><span class="octicon octicon-link"></span></a>Building</h3>
+
+<pre><code>cfx xpi --force-mobile
+</code></pre>
 
 <h2>
 <a name="licence" class="anchor" href="#licence"><span class="octicon octicon-link"></span></a>Licence</h2>
