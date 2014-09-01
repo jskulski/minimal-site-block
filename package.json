@@ -5,7 +5,7 @@
   "description": "Block sites easily with a minimal interface.",
   "author": "Clemens Bartz",
   "license": "MPL 2.0",
-  "version": "0.2.1",
+  "version": "0.3",
   "icon": "icons/icon-48.png",
   "permissions": {"private-browsing": false},
   "preferences": [
