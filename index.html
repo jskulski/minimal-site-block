@@ -1,97 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Minimal-site-block by clemensbartz</title>
-  </head>
+<head>
+    <meta charset="utf-8">
+    <title>de.clemensbartz :: minimal-site-block</title>
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="minimal-site-block: A Firefox add-on for blocking sites easily.">
+    <link rel="icon" type="image/ico" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+    <h1 class="title">Open Source repositories by <a href="http://www.clemens-bartz.de">Clemens Bartz</a></h1>
 
-  <body>
-    <div id="container">
-      <div class="inner">
+    <h1>de</h1>
+    <h2>clemensbartz</h2>
+    <h3><a href="http://clemensbartz.de/minimal-site-block/">minimal-site-block</a></h3>
+    <span>A Firefox add-on for blocking sites easily.</span>
 
-        <header>
-          <h1>Minimal-site-block</h1>
-          <h2>A Firefox add-on for blocking sites easily.</h2>
-        </header>
+    <h4>Introduction</h4>
+    <p>This Add-on provides you with a (very) basic interface to block websites.</p>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/clemensbartz/minimal-site-block/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/clemensbartz/minimal-site-block/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/clemensbartz/minimal-site-block" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+    <h4>What does this plugin do?</h4>
+    <p>Minimal Site Block has been developed to block sites. You can specify the sites in the add-on settings.</p>
+    <p>At the moment the following block operations are supported:</p>
+    <p><ul>
+        <li>Block specific URL (with Backslash!): http://www.firefox.com/</li>
+        <li>Block URL and all pages under this URL: http://www.firefox.com/*</li>
+        <li>Block all URLs containing the pattern (with one wildcard (*) at maximum): *.firefox.com</li>
+        <li>Block files or resources: file://*,resource://*</li>
+    </ul></p>
+    <p>You can change the settings in the Extensions (about:addons).</p>
 
-        <hr>
+    <h4>What does this plugin <b>not</b> do?</h4>
+    <p>Minimal Site Block will not clutter your Firefox with <b>icons</b>, <b>toolbars</b> or <b>buttons</b>.</p>
 
-        <section id="main_content">
-          <h1>
-<a name="minimal-site-block" class="anchor" href="#minimal-site-block"><span class="octicon octicon-link"></span></a>Minimal Site block</h1>
+    <h4>Current limitations</h4>
+    <p><ul>
+        <li>There can only be one wildcard at a time due <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Low-Level_APIs/util_match-pattern">using the wildcard option</a>.</li>
+    </ul></p>
 
-<h2>
-<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h2>
+    <h4>Interested in development?</h4>
+    <p>Have a look at the <a href="https://github.com/clemensbartz/minimal-site-block">Github-Repostory</a>.</p>
 
-<p>This Add-on provides you with a basic interface to block websites. Since it uses High-Level-APIs from the Firefox Add-on SDK, this Add-on is able to run on a desktop as well as a mobile Firefox.</p>
+    <h4>Download</h4>
+    <p>You can download this add-on from the <a href="https://addons.mozilla.org/firefox/addon/minimal-site-block/">Firefox Add-On page</a>.
+    <p>Or you can download the source code and compile the add-on for yourself.</p>
 
-<h2>
-<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h2>
+    <h4>Licence</h4>
+    <p>This plugin is distributed under the MPL 2.0 Licence.
 
-<p>You can download this add-on from the <a href="https://addons.mozilla.org/firefox/addon/minimal-site-block/">Firefox Add-On page</a>.</p>
-
-<p>Or you can download the source code and compile the add-on for yourself.</p>
-
-<h2>
-<a name="develop" class="anchor" href="#develop"><span class="octicon octicon-link"></span></a>Develop</h2>
-
-<p>This Add-on is only developed using High-Level-APIs. Please refrain from using other or third-party APIs. Before using a new API, please check if it is available on <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Mobile_development">desktop as well as mobile</a>.
-Having downloaded the SDK, you can activate it like this:</p>
-
-<pre><code>source bin/activate
-</code></pre>
-
-<p>If you want to try this Add-on, try the following commands:</p>
-
-<h3>
-<a name="desktop" class="anchor" href="#desktop"><span class="octicon octicon-link"></span></a>Desktop</h3>
-
-<p>You will need a local <a href="https://www.mozilla.org/firefox">Firefox</a> installation.</p>
-
-<pre><code>cfx run
-</code></pre>
-
-<h3>
-<a name="mobile" class="anchor" href="#mobile"><span class="octicon octicon-link"></span></a>Mobile</h3>
-
-<p>Please make sure adb in your $PATH, otherwise you will have to specify the path. Please use <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta">Firefox Beta</a>.</p>
-
-<pre><code>cfx run -a fennec-on-device -b adb --mobile-app firefox_beta --force-mobile
-</code></pre>
-
-<h3>
-<a name="building" class="anchor" href="#building"><span class="octicon octicon-link"></span></a>Building</h3>
-
-<pre><code>cfx xpi --force-mobile
-</code></pre>
-
-<h2>
-<a name="licence" class="anchor" href="#licence"><span class="octicon octicon-link"></span></a>Licence</h2>
-
-<p>This plugin is distributed under the MPL 2.0 Licence.</p>
-        </section>
-
-        <footer>
-          Minimal-site-block is maintained by <a href="https://github.com/clemensbartz">clemensbartz</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
-    </div>
-  </body>
+    <p>&nbsp;</p>
+    <a href="http://www.clemens-bartz.de/impressum">Impressum</a>
+</body>
 </html>
