@@ -1,0 +1,19 @@
+#rules {
+	display: block;
+}
+
+#form, #addRule, #remove {
+	display: none;
+}
+
+#message {
+	border: 0.2em solid red;
+}
+
+dt {
+	font-weight: bold;
+}
+
+ul.simple {
+	padding-left: 0px;
+}

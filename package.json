@@ -15,9 +15,30 @@
   	"name": "blockedSites",
   	"title": "Blocked Sites",
   	"description": "Comma-separated sites to block. Please note that at maximum only one wildcard (*) is allowed per site. Example: *.firefox.com,https://developer.mozilla.org/*,http://blog.mozilla.org/,file://*",
-  	"hidden": false,
+  	"hidden": true,
   	"value": "",
   	"type": "string"
+  },
+  {
+    "name": "blockSitesUI",
+    "title": "Blocked Sites",
+    "label": "Configure",
+    "description": "Add and remove sites to block.",
+    "type": "control"
+  },
+  {
+    "name": "blockFiles",
+    "title": "Block Files",
+    "description": "Block all file URLs (file://*)",
+    "type": "bool",
+    "value": false
+  },
+  {
+    "name": "blockData",
+    "title": "Block Data",
+    "description": "Block all data URLs (data:*)",
+    "type": "bool",
+    "value": false
   }
   ],
   "translators": ["Giedrius Statkevičius"]

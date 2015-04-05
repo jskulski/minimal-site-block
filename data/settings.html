@@ -1,0 +1,44 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="style/style.css" type="text/css" />
+		<link rel="stylesheet" href="style/settings.css" type="text/css" />
+		<title data-l10n-id="Settings">Settings</title>
+	</head>
+	<body>
+		<h1 data-l10n-id="Settings">Settings</h1>
+		<div id="rules">
+			<h2 data-l10n-id="Rules">Rules</h2>
+			<button id="showForm" data-l10n-id="New">New</button>
+			<ul id="rulesList">
+				<li data-l10n-id="Loading_rules">Loading rules...</li>
+			</ul>
+			<h2 data-l10n-id="Remove_rule">Remove rule</h2>
+			<select id="removeList">
+				<option data-l10n-id="Loading_rules">Loading rules...</option>
+			</select>
+			<button id="remove" data-l10n-id="Remove">Remove</button>
+		</div>
+		<div id="form">
+			<h2 data-l10n-id="Add_new_rule">Add new rule</h2>
+			<dl>
+				<dt data-l10n-id="Instructions">Instructions:</dt>
+				<dd>
+					<ul class="simple">
+						<li data-l10n-id="Only_one_Asterix_is_allowed_per_rule">Only one Asterix (*) is allowed per rule.</li>
+						<li><i>http://www.firefox.com/</i> <span data-l10n-id="with_Backslash_will_only_block_this_specific_URL">(with Backslash!) will only block this specific URL.</span></li>
+						<li><i>http://www.firefox.com/*</i> <span data-l10n-id="will_block_this_URL_and_all_subpages">will block this URL and all subpages.</span></li>
+						<li><i>*.firefox.com</i>, <i>*.com</i> <span data-l10n-id="will_block_all_URLs_and_subpages_containing_the_domain">will block all URLs and subpages containing the domain.</span></li>
+					</ul>
+				</dd>
+				<dt data-l10n-id="Enter_one_new_rule">Enter one new rule:</dt>
+				<dd><input id="rule"></dd>
+				<dt data-l10n-id="Explanation">Explanation:</dt>
+				<dd id="message">Please enter a new rule.</dd>
+			</dl>
+			<p><button id="cancel" data-l10n-id="Cancel">Cancel</button> <button id="addRule" data-l10n-id="Add">Add</button></p>
+		</div>
+	</body>
+</html>
