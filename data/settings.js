@@ -30,8 +30,12 @@ function isURLFollowedByAsterix(pattern) {
 
 
 function changeMessage(color, msg) {
+	while (message.lastChild) {
+		message.removeChild(message.lastChild);
+	}
+	
 	message.style.borderColor = color;
-	message.innerHTML = msg;
+	message.appendChild(document.createTextNode(msg));
 }
 
 
@@ -96,11 +100,16 @@ const onShowFormClick = function(data) {
 
 
 const onGetRules = function(data) {
-	rulesList.innerHTML = "";
-	removeList.innerHTML = "";
+	while (rulesList.lastChild) {
+		rulesList.removeChild(rulesList.lastChild);
+	}
+
+	while (removeList.lastChild) {
+		removeList.removeChild(removeList.lastChild);
+	}
 
 	if (data.length == 0) {
-		const li = document.createElement("li");
+		let li = document.createElement("li");
 		li.appendChild(document.createTextNode("There are no rules, yet."));
 		rulesList.appendChild(li);
 
@@ -110,11 +119,11 @@ const onGetRules = function(data) {
 	}
 
 	for each (let rule in data) {
-		const li = document.createElement("li");
+		let li = document.createElement("li");
 		li.appendChild(document.createTextNode(rule));
 		rulesList.appendChild(li);
 
-		const option = document.createElement("option");
+		let option = document.createElement("option");
 		option.appendChild(document.createTextNode(rule));
 		option.value = rule;
 		removeList.appendChild(option);
