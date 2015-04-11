@@ -1,13 +1,42 @@
-const showForm = document.getElementById("showForm");
-const rules = document.getElementById("rules");
-const form = document.getElementById("form");
-const cancel = document.getElementById("cancel");
-const rule = document.getElementById("rule");
-const message = document.getElementById("message");
-const addRule = document.getElementById("addRule");
-const rulesList = document.getElementById("rulesList");
-const removeList = document.getElementById("removeList");
-const remove = document.getElementById("remove"); 
+window.addEventListener("load", function onLoad(event) {
+	const showForm = document.getElementById("showForm");
+	const rules = document.getElementById("rules");
+	const form = document.getElementById("form");
+	const cancel = document.getElementById("cancel");
+	const rule = document.getElementById("rule");
+	const message = document.getElementById("message");
+	const addRule = document.getElementById("addRule");
+	const rulesList = document.getElementById("rulesList");
+	const removeList = document.getElementById("removeList");
+	const remove = document.getElementById("remove");
+
+	if (rule != null) {
+		rule.addEventListener("change", onRuleChange);
+		rule.addEventListener("keyup", onRuleChange);
+	}
+
+	if (cancel != null) {
+		cancel.addEventListener("click", onCancelClick);
+	}
+
+	if (showForm != null) {
+		showForm.addEventListener("click", onShowFormClick);
+	}
+
+	if (addRule != null) {
+		addRule.addEventListener("click", onAddRuleClick);
+	}
+
+	if (remove != null) {
+		remove.addEventListener("click", onRemoveClick);
+	}
+
+	self.port.on("getRules", onGetRules);
+
+	addRule.style.display = "none";
+
+	self.port.emit("event", "load");
+});
 
 function isExactMatch(pattern) {
 	const urlPattern =
@@ -148,28 +177,3 @@ const onRemoveClick = function(data) {
 	self.port.emit("remove", 
 		removeList.options[removeList.selectedIndex].value);
 }
-
-if (rule != null) {
-	rule.addEventListener("change", onRuleChange);
-	rule.addEventListener("keyup", onRuleChange);
-}
-
-if (cancel != null) {
-	cancel.addEventListener("click", onCancelClick);
-}
-
-if (showForm != null) {
-	showForm.addEventListener("click", onShowFormClick);
-}
-
-if (addRule != null) {
-	addRule.addEventListener("click", onAddRuleClick);
-}
-
-if (remove != null) {
-	remove.addEventListener("click", onRemoveClick);
-}
-
-self.port.on("getRules", onGetRules);
-
-addRule.style.display = "none";
