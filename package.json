@@ -27,6 +27,13 @@
     "type": "control"
   },
   {
+    "name": "blockHTTP",
+    "title": "Block HTTP",
+    "description": "Block all unencrypted HTTP URLs (http://*)",
+    "type": "bool",
+    "value": false
+  },
+  {
     "name": "blockFiles",
     "title": "Block Files",
     "description": "Block all file URLs (file://*)",
